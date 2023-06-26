@@ -31,26 +31,25 @@ if (isset($_POST["mail"]) && isset($_POST["mdp"]) && ($_POST["mail"] != "") && (
 <body>
     <form method="POST" action="login.php">
         <h1>
-            Metz Numeric School
-        </h1>
-        <h2>
             Connexion
-        </h2>
+        </h1>
         <section>
             <article>
-                <label>Email</label>
-                <input class="input-form" type="email" name="mail" placeholder="abc@mail.fr" required>
-                <label>Mot de passe</label>
-                <input class="input-form" type="password" name="mdp" required>
-                <?= isset($msg) ? ("<div class='red'>" . $msg . "</div>") : ""; ?>
-                <div>
-                    <button>
-                        <a href="/">
-                            Mot de passe oublié ?
-                        </a>
-                    </button>
-                    <input type="submit" value="Connexion">
+                <div class="input-box">
+                    <input class="input-form" type="email" name="mail" placeholder=" " required>
+                    <label>Email</label>
                 </div>
+                <div class="input-box">
+                    <input class="input-form" type="password" name="mdp" required>
+                    <label>Mot de passe</label>
+                </div>
+                <?= isset($msg) ? ("<div class='wrong'>" . $msg . "</div>") : ""; ?>
+                <input class="send" type="submit" value="Connexion">
+                <button>
+                    <a href="#">
+                        Mot de passe oublié ?
+                    </a>
+                </button>
             </article>
         </section>
         <img src="../../assets/img/logo-mns.svg" alt="mns logo">
