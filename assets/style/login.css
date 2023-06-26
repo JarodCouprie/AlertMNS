@@ -54,6 +54,12 @@ section {
   border-bottom: 2px solid var(--dark-blue);
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+.input-box .icon {
+  width: 20px;
+  height: 20px;
+  pointer-events: none;
 }
 .input-box label {
   position: absolute;

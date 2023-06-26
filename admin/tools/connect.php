@@ -1,8 +1,8 @@
 <?php
 
-$dbhost = "";
-$dbname = "";
-$dbuser = "";
+$dbhost = "localhost";
+$dbname = "dbfilms";
+$dbuser = "root";
 $dbpwd = "";
 
 try{

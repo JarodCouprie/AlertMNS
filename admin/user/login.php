@@ -10,7 +10,7 @@ if (isset($_POST["mail"]) && isset($_POST["mdp"]) && ($_POST["mail"] != "") && (
         if (password_verify($_POST["mdp"], $row["user_mdp"])) {
             $_SESSION["connected"] = "ok";
             header("Location: /login.php");
-        } //full calendar pour le calendrier
+        }
     }
     $msg = "Email ou mot de passe incorrect";
 }
@@ -38,10 +38,12 @@ if (isset($_POST["mail"]) && isset($_POST["mdp"]) && ($_POST["mail"] != "") && (
                 <div class="input-box">
                     <input class="input-form" type="email" name="mail" placeholder=" " required>
                     <label>Email</label>
+                    <img src="../../assets/img/mail.svg" alt="mail icon" class="icon">
                 </div>
                 <div class="input-box">
                     <input class="input-form" type="password" name="mdp" required>
                     <label>Mot de passe</label>
+                    <img src="../../assets/img/lock.svg" alt="lock icon" class="icon">
                 </div>
                 <?= isset($msg) ? ("<div class='wrong'>" . $msg . "</div>") : ""; ?>
                 <input class="send" type="submit" value="Connexion">
