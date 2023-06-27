@@ -1,3 +1,9 @@
+<?php
+
+require_once("./protect.php");
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -7,5 +13,6 @@
   </head>
   <body>
     <h1>Vous êtes bien connecté</h1>
+    
   </body>
 </html>

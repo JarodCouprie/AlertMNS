@@ -1,6 +1,10 @@
 <?php
 session_start();
-require_once "./tools/connect.php";
+require_once "tools/connect.php";
+
+if (isset($_SESSION["connected"]) && $_SESSION["connected"]=="ok"){
+    header("Location: ./user/connected.php");
+}
 
 if (isset($_POST["mail"]) && isset($_POST["mdp"]) && ($_POST["mail"] != "") && ($_POST["mdp"] != "")) {
     $sql = "SELECT * FROM utilisateur WHERE user_mail=:mail";
