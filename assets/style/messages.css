@@ -1,0 +1,15 @@
+:root {
+  --dark-bg: #030420ff;
+  --raisin-black: #181b2aff;
+  --rich-black: #06041aff;
+  --cadet-gray: #a3a5acff;
+  --raisin-black-2: #262938ff;
+}
+@font-face {
+  font-family: "museo";
+  src: url(../fonts/MuseoModerno-VariableFont_wght.ttf);
+}
+body {
+  color: white;
+  background-color: var(--rich-black);
+}

@@ -10,6 +10,6 @@
 //     echo "Acces denied";
 // };
 
-echo ("Tout est commenté dans le code pouet pouet pouet");
+echo ("Tout est commenté dans le code !");
 
 ?>

@@ -3,7 +3,7 @@ session_start();
 require_once "tools/connect.php";
 
 if (isset($_SESSION["connected"]) && $_SESSION["connected"] == "ok") {
-    header("Location: ./user/connected.php");
+    header("Location: ./user/main.php");
 }
 
 if (isset($_POST["mail"]) && isset($_POST["mdp"]) && ($_POST["mail"] != "") && ($_POST["mdp"] != "")) {
@@ -16,7 +16,7 @@ if (isset($_POST["mail"]) && isset($_POST["mdp"]) && ($_POST["mail"] != "") && (
             $_SESSION["userName"] = $row["user_name"];
             $_SESSION["userFirstName"] = $row["user_firstname"];
             $_SESSION["userAdmin"] = $row["user_admin"];
-            header("Location: ./user/connected.php");
+            header("Location: ./user/main.php");
         }
     }
     $msg = "Email ou mot de passe incorrect";
@@ -31,9 +31,9 @@ if (isset($_POST["mail"]) && isset($_POST["mdp"]) && ($_POST["mail"] != "") && (
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/style/shared.css">
-    <link rel="stylesheet" href="./assets/style/login.css">
+    <link rel="stylesheet" href="./assets/style/main.css">
     <link rel="icon" type="image/x-icon" href="./assets/icon/fav-icon.svg">
-    <title>Connexion</title>
+    <title>Alert MNS</title>
 </head>
 
 <body>

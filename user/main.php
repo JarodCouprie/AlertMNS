@@ -5,15 +5,15 @@ require_once("./protect.php");
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="../assets/style/shared.css" />
-  <link rel="stylesheet" href="../assets/style/connected.css" />
+  <link rel="stylesheet" href="../assets/style/main.css" />
   <link rel="icon" type="image/x-icon" href="../assets/icon/fav-icon.svg" />
-  <title>Connected</title>
+  <title>Alert MNS</title>
 </head>
 
 <body>
@@ -27,7 +27,7 @@ require_once("./protect.php");
         <span>Messagerie MNS</span>
       </button>
       <button class="nav-link">
-        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+        <a href="./messages.php"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
             <path
               d="M0 12l11 3.1 7-8.1-8.156 5.672-4.312-1.202 15.362-7.68-3.974 14.57-3.75-3.339-2.17 2.925v-.769l-2-.56v7.383l4.473-6.031 4.527 4.031 6-22z" />
           </svg></a>
@@ -101,7 +101,7 @@ require_once("./protect.php");
       <?php
       $userFirstName = $_SESSION["userFirstName"];
       $userLastName = $_SESSION["userName"];
-      echo "<p>Bonne journée " . $userFirstName . " " . $userLastName . " !";
+      echo "<p>Bienvenue " . $userFirstName . " " . $userLastName . " !";
       ?>
     </section>
     <section id="section-2">Canal général</section>
