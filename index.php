@@ -7,7 +7,7 @@ if (isset($_SESSION["connected"]) && $_SESSION["connected"] == "ok") {
 }
 
 if (isset($_POST["mail"]) && isset($_POST["mdp"]) && ($_POST["mail"] != "") && ($_POST["mdp"] != "")) {
-    $sql = "SELECT * FROM utilisateur WHERE user_mail=:mail";
+    $sql = "SELECT * FROM user WHERE user_mail=:mail";
     $stmt = $db->prepare($sql);
     $stmt->execute([":mail" => $_POST["mail"]]);
     if ($row = $stmt->fetch()) {
@@ -15,6 +15,7 @@ if (isset($_POST["mail"]) && isset($_POST["mdp"]) && ($_POST["mail"] != "") && (
             $_SESSION["connected"] = "ok";
             $_SESSION["userName"] = $row["user_name"];
             $_SESSION["userFirstName"] = $row["user_firstname"];
+            $_SESSION["userAdmin"] = $row["user_admin"];
             header("Location: ./user/connected.php");
         }
     }

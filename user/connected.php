@@ -60,7 +60,10 @@ require_once("./protect.php");
         </a>
         <span>Panneau de gestion</span>
       </button>';
-      echo $adminBtn;
+      if ($_SESSION["userAdmin"]) {
+        echo $adminBtn;
+      }
+      ;
       ?>
     </article>
     <article>

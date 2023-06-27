@@ -1,14 +1,15 @@
 <?php
 
-echo password_hash("piwi", PASSWORD_DEFAULT);
+// echo password_hash("piwi", PASSWORD_DEFAULT);
 
-// $mdp = "$2y$10$6ULKX6C/.kMkfOaZdjFXg.kNlDIKPaKt7n3iv1xz6PjZ9Q1K8Ymnu";
+// $mdp = '$2y$10$k/frLgjzKMn4iRJHkXkYl.bB4aCQ0z69srR01QMqCuHkA3cmtGFiC';
 
-// if (password_verify("labombe", $mdp)){
+// if (password_verify("piwi", $mdp)){
 //     echo "Acces granted";
 // }else{
 //     echo "Acces denied";
 // };
 
+echo ("Tout est commenté dans le code pouet pouet pouet");
 
 ?>
