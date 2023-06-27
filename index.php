@@ -31,7 +31,7 @@ if (isset($_POST["mail"]) && isset($_POST["mdp"]) && ($_POST["mail"] != "") && (
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/style/shared.css">
-    <link rel="stylesheet" href="./assets/style/main.css">
+    <link rel="stylesheet" href="./assets/style/index.css">
     <link rel="icon" type="image/x-icon" href="./assets/icon/fav-icon.svg">
     <title>Alert MNS</title>
 </head>

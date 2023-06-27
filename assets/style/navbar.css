@@ -1,0 +1,80 @@
+:root {
+  --dark-bg: #030420;
+  --raisin-black: #181b2a;
+  --rich-black: #06041a;
+  --cadet-gray: #a3a5ac;
+  --bg-gray: #ffffff60;
+  --raisin-black-2: #262938ff;
+  --white: #fff;
+  --dark-gray: #323646;
+}
+@font-face {
+  font-family: "museo";
+  src: url(../fonts/MuseoModerno-VariableFont_wght.ttf);
+}
+body {
+  background-color: var(--rich-black);
+  padding: 20px;
+  height: 100vh;
+  display: flex;
+  font-family: "museo";
+}
+nav {
+  padding: 20px 10px;
+  width: 80px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 5px 0 0 5px;
+  background-color: var(--raisin-black);
+  box-shadow: 0px 0px 2px 0px #fff;
+}
+article {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+}
+.nav-link {
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: none;
+  gap: 40px;
+  width: 100%;
+}
+.nav-link a {
+  padding: 10px;
+  /* border-radius: 50%; */
+  border-radius: 10px;
+  /* border-radius: 70% 30% 30% 70% / 60% 40% 60% 40%; */
+}
+.nav-link:hover span {
+  display: block;
+}
+.nav-link:hover a {
+  background-color: var(--dark-gray);
+}
+span {
+  display: none;
+  position: absolute;
+  left: 110px;
+  padding: 0 10px;
+  border-radius: 2px;
+  background-color: var(--cadet-gray);
+  color: var(--rich-black);
+  transition: all 0.3s linear;
+  font-size: 1rem;
+  z-index: 10;
+  font-family: "museo";
+}
+svg {
+  fill: var(--white);
+  height: 30px;
+  width: 30px;
+  display: flex;
+  align-items: center;
+}

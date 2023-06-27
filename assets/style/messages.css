@@ -3,13 +3,90 @@
   --raisin-black: #181b2aff;
   --rich-black: #06041aff;
   --cadet-gray: #a3a5acff;
+  --bg-gray: #ffffff60;
   --raisin-black-2: #262938ff;
+  --blue: #0075ff;
+  --input: #323646;
+  --white: #d6d6d6;
+  --gray: #848690;
 }
 @font-face {
   font-family: "museo";
   src: url(../fonts/MuseoModerno-VariableFont_wght.ttf);
 }
-body {
+main {
+  background-color: var(--raisin-black);
+  width: 100%;
+  height: 100%;
+  border-left: none;
+  border-radius: 0 5px 5px 0;
+  box-shadow: 0px 0px 2px 0px #fff;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "talks messages";
+  gap: 10px;
+  /* background-color: var(--bg-gray); */
+  padding: 10px;
+}
+section {
+  font-size: 30px;
   color: white;
-  background-color: var(--rich-black);
+  background-color: var(--raisin-black);
+}
+#section-1 {
+  grid-area: talks;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+}
+#section-1 input {
+  height: 44px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--input);
+  color: var(--white);
+  padding: 10px;
+  font-size: 1rem;
+}
+#section-1 input:active,
+#section-1 input:focus {
+  outline: 2px solid var(--blue);
+}
+.talks-container {
+  height: 100%;
+  background-color: var(--input);
+  border-radius: 5px;
+}
+#section-1 button {
+  height: 44px;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--input);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+#section-1 button svg {
+  transform: rotate(180deg);
+  width: 20px;
+  fill: var(--gray);
+}
+#section-2 {
+  grid-area: messages;
+  background-color: var(--input);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#section-2 .bars {
+  height: 40px;
+  display: flex;
+}
+#section-2 .bars div {
+  display: flex;
 }
