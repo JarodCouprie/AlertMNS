@@ -2,7 +2,7 @@
 session_start();
 require_once "tools/connect.php";
 
-if (isset($_SESSION["connected"]) && $_SESSION["connected"]=="ok"){
+if (isset($_SESSION["connected"]) && $_SESSION["connected"] == "ok") {
     header("Location: ./user/connected.php");
 }
 
@@ -27,9 +27,9 @@ if (isset($_POST["mail"]) && isset($_POST["mdp"]) && ($_POST["mail"] != "") && (
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/style/common.css">
+    <link rel="stylesheet" href="./assets/style/shared.css">
     <link rel="stylesheet" href="./assets/style/login.css">
-    <link rel="icon" type="image/x-icon" href="./assets/img/fav-icon.svg">
+    <link rel="icon" type="image/x-icon" href="./assets/icon/fav-icon.svg">
     <title>Connexion</title>
 </head>
 
@@ -43,12 +43,12 @@ if (isset($_POST["mail"]) && isset($_POST["mdp"]) && ($_POST["mail"] != "") && (
                 <div class="input-box">
                     <input autocomplete="off" class="input-form" type="email" name="mail" placeholder=" " required>
                     <label>Email</label>
-                    <img src="./assets/img/mail.svg" alt="mail icon" class="icon">
+                    <img src="./assets/icon/mail.svg" alt="mail icon" class="icon">
                 </div>
                 <div class="input-box">
                     <input class="input-form" type="password" name="mdp" required>
                     <label>Mot de passe</label>
-                    <img src="./assets/img/lock.svg" alt="lock icon" class="icon">
+                    <img src="./assets/icon/lock.svg" alt="lock icon" class="icon">
                 </div>
                 <?= isset($msg) ? ("<div class='wrong'>" . $msg . "</div>") : ""; ?>
                 <input class="send" type="submit" value="Connexion">
@@ -59,7 +59,7 @@ if (isset($_POST["mail"]) && isset($_POST["mdp"]) && ($_POST["mail"] != "") && (
                 </button>
             </article>
         </section>
-        <img src="./assets/img/logo-mns.svg" alt="mns logo">
+        <img src="./assets/icon/logo-mns.svg" alt="mns logo">
     </form>
 </body>
 
