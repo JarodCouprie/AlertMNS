@@ -1,7 +1,7 @@
 <?php
 
 $dbhost = "localhost";
-$dbname = "dbfilms";
+$dbname = "alertmns";
 $dbuser = "root";
 $dbpwd = "";
 
