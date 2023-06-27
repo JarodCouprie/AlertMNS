@@ -25,6 +25,7 @@ if (isset($_POST["mail"]) && isset($_POST["mdp"]) && ($_POST["mail"] != "") && (
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/style/common.css">
     <link rel="stylesheet" href="./assets/style/login.css">
+    <link rel="icon" type="image/x-icon" href="./assets/img/fav-icon.svg">
     <title>Connexion</title>
 </head>
 
@@ -36,7 +37,7 @@ if (isset($_POST["mail"]) && isset($_POST["mdp"]) && ($_POST["mail"] != "") && (
         <section>
             <article>
                 <div class="input-box">
-                    <input class="input-form" type="email" name="mail" placeholder=" " required>
+                    <input autocomplete="off" class="input-form" type="email" name="mail" placeholder=" " required>
                     <label>Email</label>
                     <img src="./assets/img/mail.svg" alt="mail icon" class="icon">
                 </div>
