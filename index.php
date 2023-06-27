@@ -13,6 +13,8 @@ if (isset($_POST["mail"]) && isset($_POST["mdp"]) && ($_POST["mail"] != "") && (
     if ($row = $stmt->fetch()) {
         if (password_verify($_POST["mdp"], $row["user_password"])) {
             $_SESSION["connected"] = "ok";
+            $_SESSION["userName"] = $row["user_name"];
+            $_SESSION["userFirstName"] = $row["user_firstname"];
             header("Location: ./user/connected.php");
         }
     }
