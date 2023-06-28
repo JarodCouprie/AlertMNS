@@ -48,9 +48,7 @@ article {
 }
 .nav-link a {
   padding: 10px;
-  /* border-radius: 50%; */
-  border-radius: 10px;
-  /* border-radius: 70% 30% 30% 70% / 60% 40% 60% 40%; */
+  border-radius: 70% 30% 30% 70% / 60% 40% 60% 40%;
 }
 .nav-link:hover span {
   display: block;

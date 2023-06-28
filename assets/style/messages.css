@@ -26,7 +26,6 @@ main {
   grid-template-rows: 1fr;
   grid-template-areas: "talks messages";
   gap: 10px;
-  /* background-color: var(--bg-gray); */
   padding: 10px;
 }
 section {
@@ -38,13 +37,17 @@ section {
   grid-area: talks;
   height: 100%;
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 44px 1fr 44px;
+  grid-template-areas:
+    "input"
+    "list"
+    "more";
   gap: 10px;
 }
 #section-1 input {
-  height: 44px;
+  grid-area: input;
   border: none;
   border-radius: 5px;
   background-color: var(--input);
@@ -56,13 +59,16 @@ section {
 #section-1 input:focus {
   outline: 2px solid var(--blue);
 }
+#section-1 input::placeholder {
+  color: var(--white);
+}
 .talks-container {
-  height: 100%;
+  grid-area: list;
   background-color: var(--input);
   border-radius: 5px;
 }
 #section-1 button {
-  height: 44px;
+  grid-area: more;
   border-radius: 5px;
   border: none;
   background-color: var(--input);
@@ -73,20 +79,98 @@ section {
 #section-1 button svg {
   transform: rotate(180deg);
   width: 20px;
-  fill: var(--gray);
+  fill: var(--white);
 }
 #section-2 {
   grid-area: messages;
-  background-color: var(--input);
   border-radius: 5px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 44px 1fr 44px;
+  grid-template-areas:
+    "topbar"
+    "middle"
+    "bottombar";
+  gap: 10px;
 }
 #section-2 .bars {
-  height: 40px;
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 0 10px 0 0;
 }
 #section-2 .bars div {
   display: flex;
+}
+.topbar {
+  grid-area: topbar;
+}
+.topbar div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+.profile-picture svg {
+  width: 40px;
+  height: 40px;
+}
+.bottombar div button,
+.bottombar button,
+.profile-picture,
+.info {
+  height: 100%;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  display: grid;
+  place-items: center;
+}
+.bottombar div button:hover,
+#send:hover,
+.info:hover {
+  background-color: var(--input);
+}
+#send {
+  border-radius: 15px 5px 15px 5px;
+}
+#current-talking {
+  grid-area: middle;
+  border-radius: 5px;
+  overflow-y: scroll;
+}
+#current-talking::-webkit-scrollbar {
+  background-color: var(--input);
+  width: 10px;
+  border-radius: 5px;
+}
+#current-talking::-webkit-scrollbar-thumb {
+  background-color: var(--cadet-gray);
+}
+.bottombar {
+  grid-area: bottombar;
+}
+.bottombar div {
+  width: 100%;
+  height: 100%;
+  gap: 10px;
+}
+.bottombar div input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--input);
+  padding: 0 20px;
+  font-size: 1.2rem;
+  color: var(--white);
+}
+.bottombar div input:focus {
+  outline: 2px solid var(--blue);
+}
+.bottombar div input::placeholder {
+  color: var(--white);
 }
