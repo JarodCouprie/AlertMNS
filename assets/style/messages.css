@@ -14,6 +14,10 @@
   font-family: "museo";
   src: url(../fonts/MuseoModerno-VariableFont_wght.ttf);
 }
+body {
+  height: 100vh;
+  overflow-y: hidden;
+}
 main {
   background-color: var(--raisin-black);
   width: 100%;
@@ -27,6 +31,7 @@ main {
   grid-template-areas: "talks messages";
   gap: 10px;
   padding: 10px;
+  overflow-y: hidden;
 }
 section {
   font-size: 30px;
@@ -82,6 +87,7 @@ section {
   fill: var(--white);
 }
 #section-2 {
+  height: 100%;
   grid-area: messages;
   border-radius: 5px;
   display: grid;
@@ -92,6 +98,7 @@ section {
     "middle"
     "bottombar";
   gap: 10px;
+  overflow-y: hidden;
 }
 #section-2 .bars {
   display: flex;
@@ -138,9 +145,12 @@ section {
   border-radius: 15px 5px 15px 5px;
 }
 #current-talking {
+  height: 100%;
+  width: 100%;
   grid-area: middle;
   border-radius: 5px;
   overflow-y: scroll;
+  padding: 10px 0;
 }
 #current-talking::-webkit-scrollbar {
   background-color: var(--input);
@@ -149,6 +159,7 @@ section {
 }
 #current-talking::-webkit-scrollbar-thumb {
   background-color: var(--cadet-gray);
+  border-radius: 5px;
 }
 .bottombar {
   grid-area: bottombar;

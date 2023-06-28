@@ -135,7 +135,17 @@ require_once("./protect.php");
           </svg>
         </button>
       </div>
-      <div id="current-talking"></div>
+      <ul id="current-talking">
+        <?php
+        require_once("../tools/connect.php");
+        $sqlmsg = "SELECT * FROM message";
+        $recordset = $db->query($sqlmsg);
+        foreach ($recordset as $row) { ?>
+          <li class="db-message">
+            <?= htmlspecialchars($row["msg_content"]); ?>
+          </li>
+        <?php } ?>
+      </ul>
       <div class="bars bottombar">
         <div>
           <button>
