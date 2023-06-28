@@ -2,7 +2,6 @@
 
 require_once("../tools/protect.php");
 
-
 ?>
 
 <!DOCTYPE html>
@@ -11,9 +10,7 @@ require_once("../tools/protect.php");
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../assets/style/shared.css" />
-    <link rel="stylesheet" href="../assets/style/mns.css" />
-    <link rel="stylesheet" href="../assets/style/navbar.css" />
+    <link rel="stylesheet" href="../assets/style/dashboard.css" />
     <link rel="icon" type="image/x-icon" href="../assets/icon/fav-icon.svg" />
     <title>Alert MNS</title>
 </head>
@@ -23,12 +20,9 @@ require_once("../tools/protect.php");
     include "../partials/navbar.php"
         ?>
     <main>
-        <section id="section-1"></section>
-        <section id="section-2">
-            <p>Messagerie MNS</p>
-        </section>
-        <section id="section-3"></section>
-        <section id="section-4"></section>
+        <h1>Bienvenue
+            <?= $_SESSION["userFirstName"] . " " . $userLastName = $_SESSION["userName"] ?> sur l'interface de gestion
+        </h1>
     </main>
 </body>
 
