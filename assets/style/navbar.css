@@ -1,23 +1,12 @@
-:root {
-  --dark-bg: #030420;
-  --raisin-black: #181b2a;
-  --rich-black: #06041a;
-  --cadet-gray: #a3a5ac;
-  --bg-gray: #ffffff60;
-  --raisin-black-2: #262938ff;
-  --white: #fff;
-  --dark-gray: #323646;
-}
-@font-face {
-  font-family: "museo";
-  src: url(../fonts/MuseoModerno-VariableFont_wght.ttf);
-}
+@import url("./shared.css");
+@import url("./navbar.css");
 body {
   background-color: var(--rich-black);
   padding: 20px;
   height: 100vh;
   display: flex;
   font-family: "museo";
+  color: var(--white);
 }
 nav {
   padding: 20px 10px;
@@ -75,4 +64,11 @@ span {
   width: 30px;
   display: grid;
   place-items: center;
+}
+main {
+  width: 100%;
+  height: 100%;
+  border-left: none;
+  border-radius: 0 5px 5px 0;
+  box-shadow: 0px 0px 2px 0px #fff;
 }

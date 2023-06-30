@@ -1,13 +1,4 @@
-:root {
-  --light-bg: #ffffff;
-  --blue: #0075ff;
-  --orange: #ff5b31;
-  --dark-blue: #151b36;
-}
-@font-face {
-  font-family: "museo";
-  src: url(../fonts/MuseoModerno-VariableFont_wght.ttf);
-}
+@import url("./shared.css");
 body {
   height: 100vh;
   background-color: black;
@@ -32,12 +23,12 @@ form {
   align-items: center;
   font-family: "museo";
   gap: 20px;
-  background: rgba(255, 255, 255, 0.25);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  background: #ffffff40;
+  box-shadow: 0 8px 32px 0 #1f26875e;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  border: 1px solid #ffffff2e;
 }
 section {
   height: 100%;
@@ -113,7 +104,7 @@ a {
   cursor: pointer;
 }
 .send:hover {
-  background-color: hsl(229, 44%, 20%);
+  background-color: #1d2549;
 }
 .wrong {
   font-size: 1.2rem;

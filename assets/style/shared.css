@@ -6,3 +6,24 @@
   list-style-type: none;
   text-decoration: none;
 }
+:root {
+  /* Colors */
+  --dark-bg: #030420;
+  --light-bg: #ffffff;
+  --raisin-black: #181b2a;
+  --rich-black: #06041a;
+  --cadet-gray: #a3a5ac;
+  --gray: #848690;
+  --bg-gray: #ffffff60;
+  --dark-gray: #323646;
+  --white: #ffffff;
+  --blue: #0075ff;
+  --orange: #ff5b31;
+  --dark-blue: #151b36;
+  --input: #323646;
+}
+/* Fonts */
+@font-face {
+  font-family: "museo";
+  src: url(../fonts/MuseoModerno-VariableFont_wght.ttf);
+}

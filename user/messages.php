@@ -11,9 +11,7 @@ require_once("../tools/protect.php");
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="../assets/style/shared.css" />
   <link rel="stylesheet" href="../assets/style/messages.css" />
-  <link rel="stylesheet" href="../assets/style/navbar.css" />
   <link rel="icon" type="image/x-icon" href="../assets/icon/fav-icon.svg" />
   <title>Alert MNS</title>
 </head>
