@@ -10,6 +10,7 @@ main {
     "list bottombar";
   gap: 10px;
   padding: 10px;
+  background-color: var(--raisin-black);
 }
 svg {
   fill: var(--white);
@@ -20,7 +21,7 @@ svg {
   grid-area: input;
   border: none;
   border-radius: 5px;
-  background-color: var(--input);
+  background-color: var(--dark-gray);
   color: var(--white);
   padding: 10px;
   font-size: 1rem;
@@ -42,7 +43,7 @@ svg {
   padding: 0 10px 0 0;
 }
 #talks-container::-webkit-scrollbar {
-  background-color: var(--input);
+  background-color: var(--dark-gray);
   width: 4px;
   border-radius: 5px;
 }
@@ -59,7 +60,7 @@ svg {
   color: var(--white);
 }
 .talks:hover {
-  background-color: var(--input);
+  background-color: var(--dark-gray);
   cursor: pointer;
 }
 .talks-picture {
@@ -105,7 +106,7 @@ svg {
   place-items: center;
 }
 #info:hover {
-  background-color: var(--input);
+  background-color: var(--dark-gray);
 }
 #middle {
   grid-area: middle;
@@ -118,7 +119,7 @@ svg {
   gap: 40px;
 }
 #middle::-webkit-scrollbar {
-  background-color: var(--input);
+  background-color: var(--dark-gray);
   width: 6px;
   border-radius: 5px;
 }
@@ -128,7 +129,7 @@ svg {
 }
 .db-message {
   max-width: 50%;
-  background-color: var(--input);
+  background-color: var(--dark-gray);
   padding: 10px;
   border-radius: 5px;
   color: var(--white);
@@ -141,7 +142,7 @@ svg {
 }
 #bottombar {
   grid-area: bottombar;
-  background-color: var(--input);
+  background-color: var(--dark-gray);
   border-radius: 5px;
 }
 #bottombar div {
@@ -154,7 +155,7 @@ svg {
   border: none;
   width: 100%;
   border-radius: 5px;
-  background-color: var(--input);
+  background-color: var(--dark-gray);
   font-size: 1.2rem;
   color: var(--white);
   outline: none;

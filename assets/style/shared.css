@@ -20,8 +20,21 @@
   --blue: #0075ff;
   --orange: #ff5b31;
   --dark-blue: #151b36;
-  --input: #323646;
 }
+.light {
+  --white: #000;
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    --rich-black: #f1f1f1;
+    --white: #06041a;
+    --raisin-black: #f6f9fa;
+    --dark-gray: #c6c7ce;
+    --cadet-gray: #06041a;
+    --bg-gray: #06041a4f;
+  }
+}
+
 /* Fonts */
 @font-face {
   font-family: "museo";

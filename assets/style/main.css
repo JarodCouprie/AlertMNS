@@ -15,7 +15,7 @@ section {
   display: grid;
   place-items: center;
   font-size: 30px;
-  color: white;
+  color: var(--white);
   background-color: var(--raisin-black);
 }
 #section-1 {

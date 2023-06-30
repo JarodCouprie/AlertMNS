@@ -13,18 +13,6 @@ require_once("../tools/protect.php");
     <link rel="stylesheet" href="../assets/style/calendar.css" />
     <link rel="icon" type="image/x-icon" href="../assets/icon/fav-icon.svg" />
     <title>Alert MNS</title>
-    <style>
-        main {
-            width: 100%;
-            display: grid;
-            place-items: center;
-        }
-
-        h1 {
-            color: #fff;
-            font-size: 5rem;
-        }
-    </style>
 </head>
 
 <body>

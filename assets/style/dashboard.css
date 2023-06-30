@@ -2,4 +2,10 @@
 @import url("./navbar.css");
 main {
   background-color: var(--raisin-black);
+  color: var(--white);
+  font-size: 3rem;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  text-align: center;
 }

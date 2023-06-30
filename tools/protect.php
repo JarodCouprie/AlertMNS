@@ -1,5 +1,6 @@
-<?php // fichier à inclure à toutes les pages dont on veut qu'il y ait une connection
+<?php
+// File mandatory to secure pages access
 session_start();
-if (!isset($_SESSION["connected"]) || $_SESSION["connected"]!="ok"){
+if (!isset($_SESSION["connected"]) || $_SESSION["connected"] != "ok") {
     header("Location: ../index.php");
 }

@@ -1,6 +1,12 @@
 <?php
 
 require_once("../tools/protect.php");
+/**
+ * Grant acces only if the user has the admin property set to True (or 1)
+ */
+if (!isset($_SESSION["userAdmin"]) || !$_SESSION["userAdmin"]) {
+    header("Location: ../user/main.php");
+}
 
 ?>
 
