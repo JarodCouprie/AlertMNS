@@ -26,7 +26,7 @@
 }
 @media (prefers-color-scheme: light) {
   :root {
-    /* --rich-black: #f1f1f1; */
+    --rich-black: #c6c7ce;
     --white: #06041a;
     --raisin-black: #f6f9fa;
     --dark-gray: #c6c7ce;

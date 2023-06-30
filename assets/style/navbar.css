@@ -1,5 +1,4 @@
 @import url("./shared.css");
-@import url("./navbar.css");
 body {
   background-color: var(--rich-black);
   padding: 20px;
@@ -34,8 +33,9 @@ article {
   border: none;
   gap: 40px;
   width: 100%;
+  cursor: pointer;
 }
-.nav-link a {
+.nav-link .link {
   padding: 10px;
   border-radius: 70% 30% 30% 70% / 60% 40% 60% 40%;
 }
@@ -43,7 +43,7 @@ article {
   display: block;
   color: var(--white);
 }
-.nav-link:hover a {
+.nav-link:hover .link {
   background-color: var(--dark-gray);
 }
 span {

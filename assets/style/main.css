@@ -8,7 +8,7 @@ main {
     "welcome welcome mail"
     "generalCanal adminCanal mail"
     "weather weather mail";
-  gap: 1px;
+  gap: 10px;
   background-color: var(--raisin-black);
   padding: 10px;
 }
