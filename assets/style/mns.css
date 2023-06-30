@@ -9,7 +9,8 @@ main {
     "chanels messages"
     "chanels sending";
   gap: 1px;
-  background-color: var(--bg-gray);
+  background-color: var(--raisin-black);
+  padding: 10px;
 }
 section {
   font-size: 30px;
@@ -21,6 +22,7 @@ section {
 }
 #section-2 {
   grid-area: topbar;
+  border-radius: 0 5px 0 0;
 }
 #section-3 {
   grid-area: messages;

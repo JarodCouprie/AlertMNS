@@ -22,11 +22,11 @@
   --dark-blue: #151b36;
 }
 .light {
-  --white: #000;
+  --white: #06041a;
 }
 @media (prefers-color-scheme: light) {
   :root {
-    --rich-black: #f1f1f1;
+    /* --rich-black: #f1f1f1; */
     --white: #06041a;
     --raisin-black: #f6f9fa;
     --dark-gray: #c6c7ce;
@@ -34,7 +34,6 @@
     --bg-gray: #06041a4f;
   }
 }
-
 /* Fonts */
 @font-face {
   font-family: "museo";

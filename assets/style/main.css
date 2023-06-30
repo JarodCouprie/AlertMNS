@@ -9,7 +9,8 @@ main {
     "generalCanal adminCanal mail"
     "weather weather mail";
   gap: 1px;
-  background-color: var(--bg-gray);
+  background-color: var(--raisin-black);
+  padding: 10px;
 }
 section {
   display: grid;
@@ -17,6 +18,8 @@ section {
   font-size: 30px;
   color: var(--white);
   background-color: var(--raisin-black);
+  border: 1px solid var(--bg-gray);
+  border-radius: 5px;
 }
 #section-1 {
   grid-area: welcome;
