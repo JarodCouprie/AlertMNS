@@ -16,6 +16,7 @@ if (isset($_POST["mail"]) && isset($_POST["mdp"]) && ($_POST["mail"] != "") && (
             $_SESSION["userName"] = $row["user_name"];
             $_SESSION["userFirstName"] = $row["user_firstname"];
             $_SESSION["userAdmin"] = $row["user_admin"];
+            $_SESSION["userID"] = $row["user_id"];
             header("Location: ./user/main.php");
         }
     }

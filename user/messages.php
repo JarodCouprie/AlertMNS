@@ -24,13 +24,22 @@ require_once("../tools/protect.php");
     ?>
   <main>
     <input id="search-someone" type="text" placeholder="Recherche une conversation">
-    <div id="talks-container"></div>
-    <button id="more-button">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-        <path
-          d="M23.677 18.52c.914 1.523-.183 3.472-1.967 3.472h-19.414c-1.784 0-2.881-1.949-1.967-3.472l9.709-16.18c.891-1.483 3.041-1.48 3.93 0l9.709 16.18z" />
-      </svg>
-    </button>
+    <div id="talks-container">
+      <?php
+      require_once("../tools/connect.php");
+      $userId = $_SESSION["userID"];
+      $sqlusers = "SELECT * FROM user WHERE user_id != $userId";
+      $recordsetUsers = $db->query($sqlusers);
+      foreach ($recordsetUsers as $rowUsers) { ?>
+        <div class="talks">
+          <div class="talks-picture">
+          </div>
+          <p>
+            <?= htmlspecialchars($rowUsers["user_firstname"]) . " " . htmlspecialchars($rowUsers["user_name"]); ?>
+          </p>
+        </div>
+      <?php } ?>
+    </div>
     <div class="bars" id="topbar">
       <div>
         <div id="profile-picture">
@@ -50,7 +59,6 @@ require_once("../tools/protect.php");
     </div>
     <div id="middle">
       <?php
-      require_once("../tools/connect.php");
       $sqlmsg = "SELECT * FROM message ORDER BY msg_date_creation DESC";
       $recordset = $db->query($sqlmsg);
       foreach ($recordset as $row) { ?>
@@ -74,10 +82,10 @@ require_once("../tools/protect.php");
               fill-rule="nonzero" />
           </svg>
         </button>
-        <input id="write-input" type="text" placeholder="Aa">
+        <input id="write-input" type="text" placeholder="Envoyer un message">
       </div>
       <button id="send">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24">
           <path
             d="M24 0l-6 22-8.129-7.239 7.802-8.234-10.458 7.227-7.215-1.754 24-12zm-15 16.668v7.332l3.258-4.431-3.258-2.901z" />
         </svg>

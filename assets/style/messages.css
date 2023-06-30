@@ -28,9 +28,14 @@ main {
   grid-template-areas:
     "input topbar"
     "list middle"
-    "more bottombar";
+    "list bottombar";
   gap: 10px;
   padding: 10px;
+}
+svg {
+  fill: var(--white);
+  height: 30px;
+  width: 30px;
 }
 #search-someone {
   grid-area: input;
@@ -50,29 +55,45 @@ main {
 }
 #talks-container {
   grid-area: list;
+  border-radius: 5px;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0 10px 0 0;
+}
+#talks-container::-webkit-scrollbar {
   background-color: var(--input);
+  width: 4px;
   border-radius: 5px;
 }
-#more-button {
-  grid-area: more;
+#talks-container::-webkit-scrollbar-thumb {
+  background-color: var(--cadet-gray);
   border-radius: 5px;
-  border: none;
+}
+.talks {
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  color: var(--white);
+}
+.talks:hover {
   background-color: var(--input);
-  display: grid;
-  place-items: center;
   cursor: pointer;
 }
-#more-button svg {
-  transform: rotate(180deg);
-  width: 20px;
-  fill: var(--white);
+.talks-picture {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: var(--white);
 }
 .bars {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 10px;
-  padding: 0 10px 0 0;
   color: var(--white);
 }
 .bars div {
@@ -104,13 +125,8 @@ main {
   display: grid;
   place-items: center;
 }
-#info:hover,
-#actions:hover,
-#send:hover {
+#info:hover {
   background-color: var(--input);
-}
-#send {
-  border-radius: 15px 5px 15px 5px;
 }
 #middle {
   grid-area: middle;
@@ -124,7 +140,7 @@ main {
 }
 #middle::-webkit-scrollbar {
   background-color: var(--input);
-  width: 10px;
+  width: 6px;
   border-radius: 5px;
 }
 #middle::-webkit-scrollbar-thumb {
@@ -146,6 +162,8 @@ main {
 }
 #bottombar {
   grid-area: bottombar;
+  background-color: var(--input);
+  border-radius: 5px;
 }
 #bottombar div {
   width: 100%;
@@ -158,12 +176,9 @@ main {
   width: 100%;
   border-radius: 5px;
   background-color: var(--input);
-  padding: 0px 20px;
   font-size: 1.2rem;
   color: var(--white);
-}
-#write-input:focus {
-  outline: 2px solid var(--blue);
+  outline: none;
 }
 #write-input::placeholder {
   color: var(--white);

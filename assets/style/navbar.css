@@ -69,10 +69,10 @@ span {
   z-index: 10;
   font-family: "museo";
 }
-svg {
+.nav-svg {
   fill: var(--white);
   height: 30px;
   width: 30px;
-  display: flex;
-  align-items: center;
+  display: grid;
+  place-items: center;
 }
