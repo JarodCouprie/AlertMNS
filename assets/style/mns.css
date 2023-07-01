@@ -8,21 +8,20 @@ main {
     "chanels topbar"
     "chanels messages"
     "chanels sending";
-  gap: 1px;
-  background-color: var(--raisin-black);
+  gap: 10px;
   padding: 10px;
 }
 section {
   font-size: 30px;
   color: var(--white);
-  background-color: var(--raisin-black);
+  background-color: var(--gray);
+  border-radius: 5px;
 }
 #section-1 {
   grid-area: chanels;
 }
 #section-2 {
   grid-area: topbar;
-  border-radius: 0 5px 0 0;
 }
 #section-3 {
   grid-area: messages;

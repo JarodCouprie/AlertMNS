@@ -17,6 +17,7 @@ if (!isset($_SESSION["userAdmin"]) || !$_SESSION["userAdmin"]) {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../assets/style/dashboard.css" />
+    <script type="module" src="../assets/scripts/navbar.js"></script>
     <link rel="icon" type="image/x-icon" href="../assets/icon/fav-icon.svg" />
     <title>Alert MNS</title>
 </head>
