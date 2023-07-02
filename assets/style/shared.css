@@ -40,16 +40,6 @@
     --bg-gray: #06041a4f;
   }
 }
-@media (prefers-color-scheme: dark) {
-  .system-theme {
-    --rich-black: #06041a;
-    --white: #ffffff;
-    --raisin-black: #181b2a;
-    --dark-gray: #323646;
-    --cadet-gray: #a3a5ac;
-    --bg-gray: #ffffff60;
-  }
-}
 /* Fonts */
 @font-face {
   font-family: "museo";
