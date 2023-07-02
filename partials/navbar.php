@@ -74,11 +74,11 @@
                         <label for="light-theme">Light</label>
                     </div>
                     <div>
-                        <input type="radio" id="dark-theme" name="theme" value="dark-theme">
+                        <input type="radio" id="dark-theme" name="theme" value="dark-theme" checked>
                         <label for="dark-theme">Dark</label>
                     </div>
                     <div>
-                        <input type="radio" id="system-theme" name="theme" value="system-theme" checked>
+                        <input type="radio" id="system-theme" name="theme" value="system-theme">
                         <label for="system-theme">System</label>
                     </div>
                 </div>
