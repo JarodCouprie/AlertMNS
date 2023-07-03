@@ -27,8 +27,9 @@ if (!isset($_SESSION["userAdmin"]) || !$_SESSION["userAdmin"]) {
     include "../partials/navbar.php"
         ?>
     <main>
-        <h1>Bienvenue
-            <?= $_SESSION["userFirstName"] . " " . $userLastName = $_SESSION["userName"] ?> sur l'interface de gestion
+        <h1>Incoming feature
+            (Dashboard de
+            <?= $_SESSION["userFirstName"] . " " . $userLastName = $_SESSION["userName"] ?>)
         </h1>
     </main>
 </body>

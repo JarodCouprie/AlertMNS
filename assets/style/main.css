@@ -10,6 +10,7 @@ main {
     "weather weather mail";
   gap: 10px;
   background-color: var(--dark-gray);
+  background-color: var(--rich-black);
   padding: 10px;
 }
 section {
@@ -37,9 +38,9 @@ section {
 }
 #section-2::-webkit-scrollbar,
 #section-3::-webkit-scrollbar {
-  background-color: var(--raisin-black);
+  background-color: var(--dark-gray);
   width: 4px;
-  border-radius: 0 5px 5px 0;
+  border-radius: 2px;
 }
 #section-2::-webkit-scrollbar-thumb,
 #section-3::-webkit-scrollbar-thumb {

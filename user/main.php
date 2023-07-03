@@ -55,9 +55,10 @@ require_once("../tools/protect.php");
       INNER JOIN voir ON canal.canal_id = voir.canal_id
       INNER JOIN role ON voir.role_id = role.role_id
       INNER JOIN possede ON role.role_id = possede.role_id
-      INNER JOIN user ON possede.user_id = user.user_id
-      WHERE message.user_id = user.user_id
-      AND possede.main_role = 1";
+      INNER JOIN user ON message.user_id = user.user_id
+      WHERE possede.user_id = 101
+      AND voir.main_canal = 1
+      ORDER BY msg_date_creation DESC";
       $recordset = $db->query($sql);
       foreach ($recordset as $row) { ?>
         <div class="gen-message">

@@ -21,7 +21,7 @@ require_once("../tools/protect.php");
     include "../partials/navbar.php"
         ?>
     <main>
-        <h1>Bienvenue sur les mails</h1>
+        <h1>Incoming feature (mails)</h1>
     </main>
 </body>
 
