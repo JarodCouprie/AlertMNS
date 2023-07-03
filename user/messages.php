@@ -22,7 +22,7 @@ require_once("../tools/protect.php");
   include "../partials/navbar.php"
     ?>
   <main>
-    <input id="search-someone" type="text" placeholder="Recherche une conversation">
+    <input id="search-someone" type="text" placeholder="Rechercher une conversation">
     <div id="talks-container">
       <?php
       require_once("../tools/connect.php");
@@ -58,7 +58,7 @@ require_once("../tools/protect.php");
     </div>
     <div id="middle">
       <?php
-      $sqlmsg = "SELECT * FROM message ORDER BY msg_date_creation DESC";
+      $sqlmsg = "SELECT * FROM message INNER JOIN user ON message.user_id = user.user_id ORDER BY msg_date_creation DESC";
       $recordset = $db->query($sqlmsg);
       foreach ($recordset as $row) { ?>
         <div class="db-message">
@@ -66,7 +66,7 @@ require_once("../tools/protect.php");
             <?= htmlspecialchars($row["msg_content"]); ?>
           </p>
           <p>
-            <?= htmlspecialchars($row["msg_date_creation"]); ?>
+            <?= htmlspecialchars($row["user_name"]) . " " . htmlspecialchars($row["user_name"]) . " · " . htmlspecialchars($row["msg_date_creation"]); ?>
           </p>
         </div>
       <?php } ?>

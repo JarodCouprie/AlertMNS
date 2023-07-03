@@ -32,6 +32,7 @@ svg {
 }
 #search-someone::placeholder {
   color: var(--white);
+  opacity: 0.6;
 }
 #talks-container {
   grid-area: list;
@@ -162,4 +163,5 @@ svg {
 }
 #write-input::placeholder {
   color: var(--white);
+  opacity: 0.6;
 }
