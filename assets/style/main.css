@@ -9,7 +9,7 @@ main {
     "generalCanal adminCanal mail"
     "weather weather mail";
   gap: 10px;
-  background-color: var(--raisin-black);
+  background-color: var(--dark-gray);
   padding: 10px;
 }
 section {
@@ -18,7 +18,6 @@ section {
   font-size: 30px;
   color: var(--white);
   background-color: var(--raisin-black);
-  border: 1px solid var(--bg-gray);
   border-radius: 5px;
 }
 #section-1 {
@@ -26,6 +25,40 @@ section {
 }
 #section-2 {
   grid-area: generalCanal;
+}
+#section-2,
+#section-3 {
+  border-radius: 5px;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 10px;
+  padding: 10px;
+}
+#section-2::-webkit-scrollbar,
+#section-3::-webkit-scrollbar {
+  background-color: var(--raisin-black);
+  width: 4px;
+  border-radius: 0 5px 5px 0;
+}
+#section-2::-webkit-scrollbar-thumb,
+#section-3::-webkit-scrollbar-thumb {
+  background-color: var(--cadet-gray);
+  border-radius: 2px;
+}
+.gen-message {
+  width: 100%;
+  background-color: var(--dark-gray);
+  padding: 10px;
+  border-radius: 5px;
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  font-size: 0.8rem;
+}
+.gen-message p:last-child {
+  color: var(--blue);
+  align-self: flex-end;
 }
 #section-3 {
   grid-area: adminCanal;

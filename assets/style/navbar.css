@@ -44,7 +44,6 @@ article {
 }
 .nav-link:hover span {
   display: block;
-  color: var(--white);
 }
 .nav-link:hover,
 .nav-link:focus {
@@ -56,7 +55,7 @@ span {
   left: 110px;
   padding: 0 10px;
   border-radius: 2px;
-  background-color: var(--dark-gray);
+  background-color: var(--white);
   color: var(--rich-black);
   transition: all 0.3s linear;
   font-size: 1rem;
@@ -98,4 +97,7 @@ dialog .radio-container {
   gap: 10px;
   background-color: var(--dark-gray);
   color: var(--white);
+}
+.active-page {
+  fill: var(--blue);
 }
