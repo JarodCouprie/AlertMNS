@@ -41,7 +41,7 @@ require_once("../tools/protect.php");
             <?= htmlspecialchars($row["msg_content"]); ?>
           </p>
           <p>
-            <?= htmlspecialchars($row["user_name"]) . " " . htmlspecialchars($row["user_name"]) . " · " . htmlspecialchars($row["msg_date_creation"]); ?>
+            <?= htmlspecialchars($row["user_firstname"]) . " " . htmlspecialchars($row["user_name"]) . " · " . htmlspecialchars($row["msg_date_creation"]); ?>
           </p>
         </div>
       <?php } ?>
@@ -66,7 +66,7 @@ require_once("../tools/protect.php");
             <?= htmlspecialchars($row["msg_content"]); ?>
           </p>
           <p>
-            <?= htmlspecialchars($row["user_name"]) . " " . htmlspecialchars($row["user_name"]) . " · " . htmlspecialchars($row["msg_date_creation"]); ?>
+            <?= htmlspecialchars($row["user_firstname"]) . " " . htmlspecialchars($row["user_name"]) . " · " . htmlspecialchars($row["msg_date_creation"]); ?>
           </p>
         </div>
       <?php } ?>
