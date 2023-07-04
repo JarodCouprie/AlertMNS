@@ -101,3 +101,9 @@ dialog .radio-container {
 .active-page {
   fill: var(--blue);
 }
+@media (height<800px) {
+  .nav-svg {
+    height: 20px;
+    width: 20px;
+  }
+}
