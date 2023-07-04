@@ -26,6 +26,7 @@ require_once("../tools/protect.php");
         <div id="chanel-container">
             <?php
             require_once("../tools/connect.php");
+            $userId = $_SESSION["userID"];
             $sqlChannels = "SELECT * FROM canal ORDER BY canal_name ASC";
             $recordsetChannels = $db->query($sqlChannels);
             foreach ($recordsetChannels as $rowChannels) { ?>
@@ -50,7 +51,7 @@ require_once("../tools/protect.php");
         </div>
         <div id="middle">
             <?php
-            $sqlmsg = "SELECT * FROM message INNER JOIN user ON message.user_id = user.user_id";
+            $sqlmsg = "SELECT * FROM message INNER JOIN user ON message.user_id = user.user_id ORDER BY msg_date_creation DESC";
             $recordset = $db->query($sqlmsg);
             foreach ($recordset as $row) { ?>
                 <div class="db-message">
@@ -73,7 +74,12 @@ require_once("../tools/protect.php");
                             fill-rule="nonzero" />
                     </svg>
                 </button>
-                <input id="write-input" type="text" placeholder="Envoyer un message">
+                <form method="POST" action="./mnsHandling.php"><input id="write-input" type="text"
+                        placeholder="Envoyer un message" name="msg_content">
+                    <input type="number" name="user_id" value="<?= $userId ?>" hidden>
+                    <input type="datetime" name="msg_date_creation" hidden value="<?= date("Y-m-d H:i:s"); ?>">
+                    <input type="submit" hidden>
+                </form>
             </div>
             <button id="send">
                 <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24">

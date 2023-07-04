@@ -7,7 +7,7 @@ main {
   grid-template-areas:
     "welcome welcome mail"
     "generalCanal adminCanal mail"
-    "weather weather mail";
+    "generalCanal adminCanal weather";
   gap: 10px;
   background-color: var(--dark-gray);
   background-color: var(--rich-black);

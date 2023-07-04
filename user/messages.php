@@ -66,7 +66,7 @@ require_once("../tools/protect.php");
             <?= htmlspecialchars($row["msg_content"]); ?>
           </p>
           <p>
-            <?= htmlspecialchars($row["user_name"]) . " " . htmlspecialchars($row["user_name"]) . " · " . htmlspecialchars($row["msg_date_creation"]); ?>
+            <?= htmlspecialchars($row["user_firstname"]) . " " . htmlspecialchars($row["user_name"]) . " · " . htmlspecialchars($row["msg_date_creation"]); ?>
           </p>
         </div>
       <?php } ?>
@@ -81,7 +81,12 @@ require_once("../tools/protect.php");
               fill-rule="nonzero" />
           </svg>
         </button>
-        <input id="write-input" type="text" placeholder="Envoyer un message">
+        <form method="POST" action="./messagesHandling.php">
+          <input id="write-input" type="text" placeholder="Envoyer un message" name="msg_content">
+          <input type="number" name="user_id" value="<?= $userId ?>" hidden>
+          <input type="datetime" name="msg_date_creation" hidden value="<?= date("Y-m-d H:i:s"); ?>">
+          <input type="submit" hidden>
+        </form>
       </div>
       <button id="send">
         <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24">
